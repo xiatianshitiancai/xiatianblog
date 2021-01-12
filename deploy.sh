@@ -10,12 +10,12 @@ npm run build
 cd docs/.vuepress/dist
 
 # deploy to github
-if [ -z "$GITHUB_TOKEN" ]; then
+if [ -z "$ACCESS_TOKEN" ]; then
   msg='deploy'
   githubUrl=git@github.com:xiatianshitiancai/xiazhiyong.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://xiazhiyong:${GITHUB_TOKEN}@git@github.com:xiatianshitiancai/xiazhiyong.git
+  githubUrl=https://xiazhiyong:${ACCESS_TOKEN}@git@github.com:xiatianshitiancai/xiazhiyong.git
   git config --global user.name "xiazhiyong"
   git config --global user.email "406728963@qq.com"
 fi
